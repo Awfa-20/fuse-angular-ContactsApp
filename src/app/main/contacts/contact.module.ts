@@ -8,7 +8,9 @@ import { ContactsCreateComponent } from './contacts-create/contacts-create.compo
 
 const routes = [
     { path: 'contact-list', component: ContactsListComponent },
-    { path: 'contact-create', component: ContactsCreateComponent },
+    { path: 'contact', component: ContactsCreateComponent },
+    { path: 'contact/new', component: ContactsCreateComponent },
+    { path: 'contact/edit/:id', component: ContactsCreateComponent },
 ];
 
 @NgModule({

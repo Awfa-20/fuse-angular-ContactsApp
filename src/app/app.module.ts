@@ -6,6 +6,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
+
 import { TranslateModule } from '@ngx-translate/core';
 
 import { FuseModule } from '@fuse/fuse.module';
@@ -48,6 +50,7 @@ const appRoutes: Routes = [
         // Material
         MatButtonModule,
         MatIconModule,
+        MatTableModule,
 
         // Fuse modules
         FuseModule.forRoot(fuseConfig),

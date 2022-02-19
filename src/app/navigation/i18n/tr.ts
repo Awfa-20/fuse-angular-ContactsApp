@@ -8,7 +8,8 @@ export const locale = {
                 'BADGE': '15'
             },
             'Contacts'      : {
-                'TITLE': 'Kişiler'
+                'TITLE': 'Kişiler',
+                'BADGE': '25'
             }
         }
     }

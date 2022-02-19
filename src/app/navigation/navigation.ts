@@ -28,6 +28,12 @@ export const navigation: FuseNavigation[] = [
                 type     : 'item',
                 icon     : 'person',
                 url      : '/contact-list',
+                badge    : {
+                    title    : '25',
+                    translate: 'NAV.Contacts.BADGE',
+                    bg       : '#F44336',
+                    fg       : '#FFFFFF'
+                }
             }
         ]
     }
