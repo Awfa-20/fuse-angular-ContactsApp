@@ -1,0 +1,19 @@
+.main-content{
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+  }
+
+  .form-control{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .mat-form-field{
+      width: 100%;
+  }
+
+  .controls{
+    width: 100%;
+  }

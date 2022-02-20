@@ -1,1 +1,99 @@
-<p>contacts-create works!</p>
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <mat-card class="example-card">
+                <form [formGroup]='createContactForm' *ngIf="createContactForm"
+                    (ngSubmit)="createContactForm.valid && onSubmit()">
+                    <mat-card-actions>
+                        <div class="form-control col-md-12">
+                            <button mat-button><mat-icon class="mat-18" routerLink="/contact-list">close</mat-icon></button>
+                            
+                            <button mat-raised-button color="primary"
+                                (click)="onClick()">save</button>
+                            <button mat-raised-button type="submit"
+                                color="primary"
+                                [disabled]="!createContactForm.valid">Submit</button>
+                        </div>
+                    </mat-card-actions>
+
+                    <mat-divider></mat-divider>
+    
+                    <mat-card-content>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field class="controls"  appearance="standard">
+                                    <mat-label>First Name</mat-label>
+                                    <input matInput placeholder="first name" [formControl]="first_Name" required>
+                                  </mat-form-field>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field class="controls"  appearance="standard">
+                                    <mat-label>Last Name</mat-label>
+                                    <input matInput placeholder="last name" [formControl]="last_Name" required>
+                                  </mat-form-field>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field class="controls"  appearance="standard">
+                                    <mat-label>company</mat-label>
+                                    <input matInput placeholder="Company" [formControl]="company" required>
+                                  </mat-form-field>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field class="controls"  appearance="standard">
+                                    <mat-label>Job Title</mat-label>
+                                    <input matInput placeholder="Job Title" [formControl]="job_Title" required>
+                                  </mat-form-field>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field class="controls"  appearance="standard">
+                                    <mat-label>Enter your email</mat-label>
+                                    <input matInput placeholder="pat@example.com" [formControl]="email" required>
+                                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                                  </mat-form-field>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field class="controls" appearance="standard">
+                                    <mat-label>Phone number</mat-label>
+                                    <example-tel-input formControlName="phone"
+                                        required></example-tel-input>
+                                    <mat-icon matPrefix>phone</mat-icon>
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field class="controls"  appearance="standard">
+                                    <mat-label>Notes</mat-label>
+                                    <input matInput placeholder="notes" [formControl]="notes" required>
+                                  </mat-form-field>
+                            </div>
+
+                        </div>
+                    </mat-card-content>
+                </form>
+
+            </mat-card>
+        </div>
+    </div>
+</div>
