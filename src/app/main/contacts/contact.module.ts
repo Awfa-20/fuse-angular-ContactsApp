@@ -5,6 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { FuseSharedModule } from '@fuse/shared.module';
 import { ContactsListComponent } from './contacts-list/contacts-list.component';
 import { ContactsCreateComponent } from './contacts-create/contacts-create.component';
+import { MaterialModule } from './material.module';
 
 const routes = [
     { path: 'contact-list', component: ContactsListComponent },
@@ -24,7 +25,9 @@ const routes = [
 
         TranslateModule,
 
-        FuseSharedModule
+        FuseSharedModule,
+        
+        MaterialModule,
     ],
     exports: [
         // ContactsListComponent,
