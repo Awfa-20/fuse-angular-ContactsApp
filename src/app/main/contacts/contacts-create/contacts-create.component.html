@@ -1,107 +1,168 @@
 <div class="main-content">
     <div class="container-fluid">
-        <div class="col-md-12">
-            <mat-card class="example-card">
-                <form [formGroup]='createContactForm' *ngIf="createContactForm"
-                    (ngSubmit)="createContactForm.valid && onSubmit()">
-                    <div class="row">
-                        <div class="form-control col-md-12">
-                            <button mat-button>
-                                <mat-icon class="mat-18"
-                                    routerLink="/contact-list">
-                                    close</mat-icon>
-                            </button>
-                            <button mat-raised-button color="primary"
-                                (click)="onClick()">save</button>
-                            <button mat-raised-button type="submit"
-                                color="primary"
-                                [disabled]="!createContactForm.valid">Submit</button>
-                        </div>
-                    </div>
-                    <mat-divider></mat-divider>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <mat-form-field appearance="outline">
-                                <mat-label>First Name</mat-label>
-                                <input matInput placeholder="first name"
-                                    [formControl]='createContactForm.controls["first_Name"]'
-                                    required>
-                            </mat-form-field>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <mat-form-field appearance="outline">
-                                <mat-label>Last Name</mat-label>
-                                <input matInput placeholder="last name"
-                                    [formControl]='createContactForm.controls["last_Name"]'
-                                    required>
-                            </mat-form-field>
-                        </div>
-                    </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- <mat-card class="example-card"> -->
+                    <form [formGroup]='createContactForm' *ngIf="createContactForm"
+                        (ngSubmit)="createContactForm.valid && onSubmit()">
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <mat-form-field appearance="outline">
-                                <mat-label>company</mat-label>
-                                <input matInput placeholder="Company"
-                                    [formControl]='createContactForm.controls["company"]'
-                                    required>
-                            </mat-form-field>
+                        <div class="row">
+                            <div class="form-control">
+                                <button mat-button>
+                                    <mat-icon class="mat-18"
+                                        routerLink="/contact-list">
+                                        close</mat-icon>
+                                </button>
+                                <button mat-raised-button type="button"
+                                    color="primary"
+                                    (click)="onClick()">save</button>
+                                <button mat-raised-button type="submit"
+                                    color="primary"
+                                    [disabled]="!createContactForm.valid">Submit</button>
+                            </div>
                         </div>
-                    </div>
+                        <mat-divider></mat-divider>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <mat-form-field appearance="outline">
-                                <mat-label>Job Title</mat-label>
-                                <input matInput placeholder="Job Title"
-                                    [formControl]='createContactForm.controls["job_Title"]'
-                                    required>
-                            </mat-form-field>
+                        <div class="row"> 
+                            <div class="col-md-1">                                    
+                                <mat-icon class="mat-18" matSuffix>person</mat-icon>
+                            </div>
+                            
+                            <div class="form-control col-md-10">                               
+                                <mat-form-field appearance="outline">
+                                    <mat-label>ID</mat-label>
+                                    <input matInput placeholder="ID"
+                                    formControlName="id" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-1">                                    
+                                <mat-icon class="mat-18" matSuffix>close</mat-icon>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <mat-form-field appearance="outline">
-                                <mat-label>Enter your email</mat-label>
-                                <input matInput placeholder="pat@example.com"
-                                    [formControl]='createContactForm.controls["email"]'
-                                    required>
-                                <mat-error *ngIf="email.invalid">
-                                    {{getErrorMessage()}}</mat-error>
-                            </mat-form-field>
+                        <div class="row">
+                            <div class="col-md-1">                                    
+                                <mat-icon class="mat-18" matSuffix>person</mat-icon>
+                            </div>
+                            <div class="form-control col-md-6">                                
+                                <mat-form-field appearance="outline">
+                                    <mat-label>First Name</mat-label>
+                                    <input matInput placeholder="first name"
+                                        formControlName="first_Name" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-1">                                    
+                                <mat-icon class="mat-18" matSuffix>close</mat-icon>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <mat-form-field appearance="outline">
-                                <mat-label>Phone number</mat-label>
-                                <example-tel-input
-                                    [formControl]='createContactForm.controls["phone"]'
-                                    placeholder="phone" required>
-                                </example-tel-input>
-                                <mat-icon matPrefix>phone</mat-icon>
-                            </mat-form-field>
+                        <div class="row">
+                            <div class="col-md-1">                                    
+                                <mat-icon class="mat-18" matSuffix>person</mat-icon>
+                            </div>
+                            <div class="form-control col-md-6">                                
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Last Name</mat-label>
+                                    <input matInput placeholder= "last name"
+                                        
+                                        formControlName="last_Name" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-1">                                    
+                                <mat-icon class="mat-18" matSuffix>close</mat-icon>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <mat-form-field appearance="outline">
-                                <mat-label>Notes</mat-label>
-                                <input matInput placeholder="notes"
-                                    [formControl]='createContactForm.controls["notes"]'
-                                    required>
-                            </mat-form-field>
+    
+                        <div class="row">
+                            <div class="col-md-1">                                    
+                                <mat-icon class="mat-18" matSuffix>business</mat-icon>
+                            </div>
+                            <div class="form-control col-md-6">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>company</mat-label>
+                                    <input matInput placeholder="Company"
+                                        
+                                        formControlName= "company" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-1">                                    
+                                <mat-icon class="mat-18" matSuffix>close</mat-icon>
+                            </div>
                         </div>
-                    </div>
+    
+                        <div class="row">
+                            <div class="col-md-1">                                    
+                                <mat-icon class="mat-18" matSuffix>person</mat-icon>
+                            </div>
+                            <div class="form-control col-md-6">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Job Title</mat-label>
+                                    <input matInput placeholder="Job Title"
+                                        
+                                        formControlName= "job_Title"/>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-1">                                    
+                                <mat-icon class="mat-18" matSuffix>close</mat-icon>
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            <div class="col-md-1">                                    
+                                <mat-icon class="mat-18" matSuffix>email</mat-icon>
+                            </div>
+                            <div class="form-control col-md-6">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Enter your email</mat-label>
+                                    <input matInput placeholder="pat@example.com"
+                                    formControlName= "email" />
+                                    <!-- <mat-error *ngIf="email.invalid">
+                                        {{getErrorMessage()}}</mat-error> -->
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-1">                                    
+                                <mat-icon class="mat-18" matSuffix>close</mat-icon>
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            <div class="col-md-1">                                    
+                                <mat-icon class="mat-18" matSuffix>phone</mat-icon>
+                            </div>
+                            <div class="form-control col-md-6">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>phone</mat-label>
+                                    <input matInput placeholder="phone"
+                                    formControlName= "phone" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-1">                                    
+                                <mat-icon class="mat-18" matSuffix>close</mat-icon>
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            <div class="col-md-1">                                    
+                                <mat-icon class="mat-18" matSuffix>person</mat-icon>
+                            </div>
+                            <div class="form-control col-md-6">
+                                
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Notes</mat-label>
+                                    <input matInput placeholder="Notes"
+                                    formControlName= "notes" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-1">                                    
+                                <mat-icon class="mat-18" matSuffix>close</mat-icon>
+                            </div>
+                        </div>
+    
+                    </form>
+    
+                <!-- </mat-card> -->
+            </div>
 
-                </form>
-
-            </mat-card>
         </div>
     </div>
 </div>

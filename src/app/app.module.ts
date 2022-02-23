@@ -24,6 +24,8 @@ import { SampleModule } from 'app/main/sample/sample.module';
 import { ContactsListComponent } from './main/contacts/contacts-list/contacts-list.component';
 import { ContactsCreateComponent } from './main/contacts/contacts-create/contacts-create.component';
 import { ContactModule } from './main/contacts/contact.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from './main/contacts/material.module';
 
 const appRoutes: Routes = [
     {
@@ -42,6 +44,8 @@ const appRoutes: Routes = [
         BrowserModule,
         BrowserAnimationsModule,
         HttpClientModule,
+        ReactiveFormsModule,
+        FormsModule,
         RouterModule.forRoot(appRoutes, { relativeLinkResolution: 'legacy' }),
 
         TranslateModule.forRoot(),
@@ -50,11 +54,13 @@ const appRoutes: Routes = [
         MatMomentDateModule,
 
         // Material
-        MatButtonModule,
-        MatIconModule,
-        MatTableModule,
-        MatCardModule,
-        MatFormFieldModule,
+        
+        
+        MaterialModule,
+        // MatButtonModule,
+        // MatIconModule,
+        // MatTableModule,
+        // MatCardModule,
 
         // Fuse modules
         FuseModule.forRoot(fuseConfig),

@@ -7,7 +7,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule} from '@angular/material/card';
 import { MatStepperModule } from '@angular/material/stepper';
@@ -22,6 +22,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import {MatTabsModule} from '@angular/material/tabs';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 const materials=[
   MatToolbarModule,
@@ -47,14 +48,15 @@ const materials=[
   MatSelectModule,
   MatSelectModule,
   MatDialogModule,
-  MatTabsModule
+  MatTabsModule,  
+  MatCheckboxModule,
 ]
 
 
 @NgModule({
   declarations: [],
   imports: [materials],
-  exports:[materials]
+  exports: [materials]
 })
 
 export class MaterialModule{}

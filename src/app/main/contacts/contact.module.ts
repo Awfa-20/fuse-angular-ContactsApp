@@ -26,8 +26,6 @@ const routes = [
         TranslateModule,
 
         FuseSharedModule,
-        
-        MaterialModule,
     ],
     exports: [
         // ContactsListComponent,

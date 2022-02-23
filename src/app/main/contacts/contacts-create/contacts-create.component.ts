@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ContactsDto } from '../contactsDto';
 
 @Component({
@@ -10,10 +10,19 @@ import { ContactsDto } from '../contactsDto';
 export class ContactsCreateComponent implements OnInit {
     id!: number;
     contact: ContactsDto = {id: 0} as ContactsDto;
+    email: FormControl;
     createContactForm!: FormGroup;
     editMode = false;
 
     constructor(private fb: FormBuilder) {}
+
+    getErrorMessage() {
+        if (this.email.hasError('required')) {
+          return 'You must enter a value';
+        }
+    
+        return this.email.hasError('email') ? 'Not a valid email' : '';
+      }
 
     ngOnInit(): void {
         this.intitContactForm();
@@ -41,9 +50,14 @@ export class ContactsCreateComponent implements OnInit {
             'last_Name': [this.contact.last_Name],
             'company': [this.contact.company],
             'job_Title': [this.contact.job_Title],
-            'email': [this.contact.email],
+            'email': [this.contact.email, Validators.email],
             'phone': [this.contact.phone],
             'notes': [this.contact.notes],
         });
     }
+
+    onSubmit() {
+        const contactDto: ContactsDto = this.createContactForm.value;
+        console.log(contactDto);
+      }
 }
