@@ -27,7 +27,7 @@ export const navigation: FuseNavigation[] = [
                 translate: 'NAV.Contacts.TITLE',
                 type     : 'item',
                 icon     : 'person',
-                url      : '/contact-list',
+                url      : '/contacts',
                 badge    : {
                     title    : '25',
                     translate: 'NAV.Contacts.BADGE',

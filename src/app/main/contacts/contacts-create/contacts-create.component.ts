@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ContactsService } from '../contacts.service';
 import { ContactsDto } from '../contactsDto';
 
 @Component({
@@ -9,12 +11,13 @@ import { ContactsDto } from '../contactsDto';
 })
 export class ContactsCreateComponent implements OnInit {
     id!: number;
-    contact: ContactsDto = {id: 0} as ContactsDto;
+    contact: ContactsDto = {} as ContactsDto;
     email: FormControl;
     createContactForm!: FormGroup;
     editMode = false;
 
-    constructor(private fb: FormBuilder) {}
+    constructor(private contactsService: ContactsService, private fb: FormBuilder,
+                private route: ActivatedRoute, private router: Router) {}
 
     getErrorMessage() {
         if (this.email.hasError('required')) {
@@ -25,6 +28,14 @@ export class ContactsCreateComponent implements OnInit {
       }
 
     ngOnInit(): void {
+        this.route.params
+      .subscribe(
+        (params: Params) => {
+          this.id = +params['id'];
+          this.editMode = params['id'] != null;
+        //   this.initForm();
+        }
+      );
         this.intitContactForm();
         this.loadForm();
     }
@@ -33,19 +44,17 @@ export class ContactsCreateComponent implements OnInit {
 
     private intitContactForm() {
         
-        // if (this.editMode) {
-        //       this.schoolsService.getSchoolById(this.id).subscribe(response=>
-        //         { this.school= response;
-        //           this.loadForm();
-        //         });
-        // } else {
-        // this.loadForm();
-        // }
+        if (this.editMode) {
+            this.contact = this.contactsService.getContact(this.id - 1);        
+            this.loadForm();        
+        } else {
+        this.loadForm();
+        }
     }
 
     private loadForm() {
         this.createContactForm = this.fb.group({
-            'id': [this.contact.id],
+            // 'id': [this.contact.id],
             'first_Name': [this.contact.first_Name],
             'last_Name': [this.contact.last_Name],
             'company': [this.contact.company],
@@ -59,5 +68,10 @@ export class ContactsCreateComponent implements OnInit {
     onSubmit() {
         const contactDto: ContactsDto = this.createContactForm.value;
         console.log(contactDto);
+        if ( this.editMode ){
+            this.contactsService.updateContact(this.id - 1, contactDto);
+        }else {
+            this.contactsService.addContact(contactDto);
+        }
       }
 }

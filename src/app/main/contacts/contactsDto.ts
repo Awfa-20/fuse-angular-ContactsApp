@@ -1,6 +1,6 @@
 export interface ContactsDto {
 
-    id: number;
+    // id: number;
     first_Name: string;
     last_Name: string;
     company: string;
