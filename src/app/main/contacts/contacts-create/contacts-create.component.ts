@@ -33,16 +33,15 @@ export class ContactsCreateComponent implements OnInit {
         (params: Params) => {
           this.id = +params['id'];
           this.editMode = params['id'] != null;
-        //   this.initForm();
+          this.intitContactForm();
         }
       );
-        this.intitContactForm();
-        this.loadForm();
+        
     }
 
     onClick() {}
 
-    private intitContactForm() {
+    async intitContactForm() {
         
         if (this.editMode) {
             this.contact = this.contactsService.getContact(this.id - 1);        

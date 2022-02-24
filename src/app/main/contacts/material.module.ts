@@ -24,7 +24,7 @@ import { MatSortModule } from '@angular/material/sort';
 import {MatTabsModule} from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
-const materials=[
+const materials = [
   MatToolbarModule,
   MatSidenavModule,
   MatButtonModule,
@@ -50,7 +50,7 @@ const materials=[
   MatDialogModule,
   MatTabsModule,  
   MatCheckboxModule,
-]
+];
 
 
 @NgModule({

@@ -54,12 +54,19 @@ export class ContactsListComponent implements OnInit, OnDestroy {
 
     onEditContact(contact: ContactsDto){
         const index = this.contacts.indexOf(contact) + 1;
-    this.router.navigate(['../contact/edit/'  + index], {relativeTo: this.route});
+    this.router.navigate(['../contact/edit'  , index], {relativeTo: this.route});
     }
 
     onDeleteContact(contact: ContactsDto){
     
     this.contactsService.deleteContact(contact);
+    }
+
+    getInfo(contact: ContactsDto){
+        const index = this.contacts.indexOf(contact) + 1;
+        this.contactsService.getContact(index);
+        this.router.navigate(['../contact', index], {relativeTo: this.route});
+
     }
   
     masterToggle() {

@@ -98,11 +98,25 @@
                     <th mat-header-cell *matHeaderCellDef mat-sort-header>Delete
                     </th>
                     <td mat-cell *matCellDef="let row">
-                      <button mat-icon-button (click)="onDeleteContact(row)">
-                        <mat-icon class="mat-18" color="warn">delete</mat-icon>
-                      </button>
+                        <div class="info">
+                            <button mat-icon-button >
+                                <mat-icon class="mat-18" color="warn" (click)="onDeleteContact(row)">delete</mat-icon>
+                              </button>
+                              <button mat-icon-button >
+                                <mat-icon class="mat-18" color="warn" (click)="getInfo(row)"><span class="material-icons">more_vert</span></mat-icon>
+                              </button>
+                        </div>
+                      
                     </td>
                   </ng-container>
+                  <!-- <ng-container matColumnDef="info">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>info</th>
+                    <td mat-cell *matCellDef="let row">
+                      <button mat-icon-button >
+                        <mat-icon class="mat-18" color="warn" (click)="onDeleteContact(row)"><span class="material-icons">more_vert</span></mat-icon>
+                      </button>
+                    </td>
+                  </ng-container> -->
   
                   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   

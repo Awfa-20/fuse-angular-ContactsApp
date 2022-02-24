@@ -107,10 +107,16 @@
     padding:0px ;
   
   }
-  th.mat-header-cell.edit, td.mat-cell.edit, td.mat-footer-cell.edir {
+  th.mat-header-cell.edit, td.mat-cell.edit, td.mat-footer-cell.edit {
     padding:0px;
     margin: 0px;
   
+  }
+
+  .info{
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
   }
   
   

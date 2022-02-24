@@ -13,7 +13,7 @@ const routes = [
     { path: 'contact', component: ContactsCreateComponent},
     { path: 'contact/new', component: ContactsCreateComponent },
     { path: 'contact/edit/:id', component: ContactsCreateComponent },
-    { path: 'contact:id', component: ContactsDetailComponent}
+    { path: 'contact/:id', component: ContactsDetailComponent}
 
 ];
 
@@ -26,6 +26,7 @@ const routes = [
         RouterModule.forChild(routes),
 
         TranslateModule,
+        MaterialModule,
 
         FuseSharedModule,
     ],

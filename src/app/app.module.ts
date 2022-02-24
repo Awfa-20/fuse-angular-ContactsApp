@@ -21,6 +21,7 @@ import { ContactsCreateComponent } from './main/contacts/contacts-create/contact
 import { ContactModule } from './main/contacts/contact.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './main/contacts/material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 const appRoutes: Routes = [
     {
@@ -62,6 +63,7 @@ const appRoutes: Routes = [
 
         // App modules
         LayoutModule,
+        FlexLayoutModule,
         SampleModule,
         ContactModule
     ],
