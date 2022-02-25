@@ -11,12 +11,14 @@ import { ContactsDto } from '../contactsDto';
 })
 export class ContactsCreateComponent implements OnInit {
     id!: number;
-    contact: ContactsDto = {} as ContactsDto;
+    contact: ContactsDto = { imagePath: '/assets/images/avatars/profile.jpg'} as ContactsDto;
     email: FormControl;
     createContactForm!: FormGroup;
     editMode = false;
     imagePath = this.contact.imagePath;
     avatarPath = '/assets/images/avatars/profile.jpg';
+
+    
     constructor(private contactsService: ContactsService, private fb: FormBuilder,
                 private route: ActivatedRoute, private router: Router) {}
 

@@ -33,7 +33,7 @@ const appRoutes: Routes = [
 @NgModule({
     declarations: [
         AppComponent,
-        ContactsListComponent,
+        ContactsListComponent,        
         ContactsCreateComponent,
 
     ],
