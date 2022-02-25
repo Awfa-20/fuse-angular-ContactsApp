@@ -1,50 +1,105 @@
-<div class="main-content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="header" fxLayout="row" fxLayout.xs="column" >
+<div class="container" fxLayout="column" fxLayoutAlign="center">
 
-                <div flex="10"  class="header-close">
-                    <button mat-button>
-                        <mat-icon class="mat-18" routerLink="/contacts">
-                            <span class="material-icons">arrow_back</span>
-                        </mat-icon>
-                    </button>
-                </div>
+    <div fxFlex class="header" fxLayout="row" fxLayout.xs="column"
+        fxLayoutAlign.xs="center">
+        <div fxFlex="5%" class="header-close">
+            <button mat-button>
+                <mat-icon class="mat-18" routerLink="/contacts">
+                    <span class="material-icons">arrow_back</span>
+                </mat-icon>
+            </button>
+        </div>
 
-                <div flex="20" class="header-image">
-                    <img mat-card-image  src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">                    
-                </div>
+        <div fxFlex fxLayoutAlign="start center" class="header-image">
+            <img mat-card-image
+                src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                alt="Photo of a Shiba Inu">
+        </div>
 
-                <div flex="20" class="header-name" >
-                            
-                    <mat-card-title>Shiba Inu</mat-card-title>
-                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                </div>
+        <div fxFlex="30%" fxLayout="column" fxLayoutAlign="center"
+            class="header-name">
 
-                <div flex="50" class="header-edit">
-                    <div class="edit">
-                                
-                        <mat-card-actions>
-                            <button mat-button>
-                                <mat-icon class="mat-18" routerLink="/contacts"><span class="material-icons">
-                                    star_border
-                                </span></mat-icon>
-                            </button>
-                            <button mat-button>
-                                <mat-icon class="mat-18" routerLink="/contacts"><span class="material-icons">
-                                    more_vert
-                                </span></mat-icon>
-                            </button>
-                            <button mat-raised-button color="primary">Edit</button>
-                          </mat-card-actions>
-                    </div>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </div>
 
-                </div>
-            </div>
+        <div fxFlex="50" fxLayout class="header-edit" fxLayoutAlign="start end">
 
-            <mat-divider></mat-divider>
 
-            
+            <mat-card-actions>
+                <button mat-button>
+                    <mat-icon class="mat-18" routerLink="/contacts"><span
+                            class="material-icons">
+                            star_border
+                        </span></mat-icon>
+                </button>
+                <button mat-button>
+                    <mat-icon class="mat-18" routerLink="/contacts"><span
+                            class="material-icons">
+                            more_vertma
+                        </span></mat-icon>
+                </button>
+                <button mat-raised-button color="primary">Edit</button>
+            </mat-card-actions>
         </div>
     </div>
+
+    <mat-divider></mat-divider>
+
+    <div fxFlex class="body">
+        <div class="ditails" fxLayout="row" fxLayoutAlign="start" >
+            <div fxFlex="50%" class="contact-details">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>Contact Details</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content fxLayout="column" fxLayoutGap="10px">
+                        <div class="mail-details"fxLayout="row" fxLayoutGap="10px">
+                            <div  class="icon">
+                                <mat-icon >
+                                    <span class="material-icons">email</span>
+                                </mat-icon>
+                            </div>
+                            <div  class="item-detail">
+                                <span>awfa.alkarfan@gmail.com</span>
+                            </div>
+                            <div  class="item-type">
+                                <span>.job</span>
+                            </div>
+                        </div>
+
+                        <div class="phon-details"fxLayout="row" fxLayoutGap="10px">
+                            <div  class="icon">
+                                <mat-icon >
+                                    <span class="material-icons">phone</span>
+                                </mat-icon>
+                            </div>
+                            <div  class="item-detail">
+                                <span>+90 537 688 01 42</span>
+                            </div>
+                            <div  class="item-type">
+                                <span>.Mobile</span>
+                            </div>
+                        </div>
+
+                        <div class="company-details"fxLayout="row" fxLayoutGap="10px">
+                            <div  class="icon">
+                                <mat-icon >
+                                    <span class="material-icons">business</span>
+                                </mat-icon>
+                            </div>
+                            <div  class="item-detail">
+                                <span>ITM</span>
+                            </div>
+                            <div  class="item-type">
+                                <span>.Company</span>
+                            </div>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+    </div>
+
 </div>

@@ -60,6 +60,7 @@ export class ContactsCreateComponent implements OnInit {
             'job_Title': [this.contact.job_Title],
             'email': [this.contact.email, Validators.email],
             'phone': [this.contact.phone],
+            'imagePath': [this.contact.imagePath],
             'notes': [this.contact.notes],
         });
     }

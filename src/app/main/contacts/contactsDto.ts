@@ -7,5 +7,6 @@ export interface ContactsDto {
     job_Title: string;
     email: string;
     phone: string;
+    imagePath: string;
     notes: string;
 }

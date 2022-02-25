@@ -23,6 +23,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import {MatTabsModule} from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 const materials = [
   MatToolbarModule,
@@ -50,6 +51,7 @@ const materials = [
   MatDialogModule,
   MatTabsModule,  
   MatCheckboxModule,
+  MatGridListModule
 ];
 
 
