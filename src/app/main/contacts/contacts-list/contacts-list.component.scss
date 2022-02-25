@@ -72,24 +72,31 @@
     line-height: 0.5rem;
   }
   
-//   .mat-column-schoolImage img {
-//     width: 50px;
-//     height: 50px;
-//     margin: 5px auto 5px auto;
-//     border-radius: 50%;
-//   }
+  .mat-column-imagePath img {
+    width: 50px;
+    height: 50px;
+    margin: 5px auto 5px auto;
+    border-radius: 50%;
+  }
   
   .mat-column-edit{
     width: 0px;
     margin: 0px;
     padding:0px ;
   }
+
+  .mat-row:hover .mat-cell {
+    cursor: pointer;
+    background-color: rgb(233, 230, 230);
+    //  color: black;
+    opacity: 0.9;
+  }
   
   .mat-header-cell {
     // border: 1px solid gray;
     font-size: 1.0vw !important;
     font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     color: #9c27b0 !important;
     // text-align: center;
     vertical-align: middle;
@@ -99,7 +106,7 @@
     // border: 1px solid gray;
     font-size: 0.8vw !important;
     font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     // text-align: center;
     vertical-align: middle;
     color: black;
@@ -124,6 +131,8 @@
     margin: 0px;
   
   }
+
+
 
   .info{
       display: flex;

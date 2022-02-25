@@ -11,19 +11,27 @@ import { ContactsDto } from '../contactsDto';
 export class ContactsDetailComponent implements OnInit {
     id!: number;
     editMode = false;
-    contact: ContactsDto;
+    contact: ContactsDto = {} as ContactsDto ;
+    avatarPath: '/assets/images/avatars/profile.jpg';
+    imagePath = this.contact.imagePath;
 
     constructor(
         private contactsService: ContactsService,
         private route: ActivatedRoute,
-        private router: Router
+        private router: Router,
     ) {}
 
     ngOnInit(): void {
         this.route.params.subscribe((params: Params) => {
             this.id = +params['id'];
             this.editMode = params['id'] != null;
-            this.contact = this.contactsService.getContact(this.id + 1);
+            this.contact = this.contactsService.getContact(this.id - 1);
         });
+    }
+
+    onEditContact(){ 
+        
+        const id = this.contactsService.getContactIndex(this.contact); 
+        this.router.navigate(['/contact/edit'  , id], {relativeTo: this.route});
     }
 }

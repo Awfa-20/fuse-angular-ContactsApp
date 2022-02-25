@@ -20,6 +20,14 @@ export const navigation: FuseNavigation[] = [
                     bg       : '#F44336',
                     fg       : '#FFFFFF'
                 }
+            }, 
+            {
+                id       : 'add_Contact',
+                title    : 'Add-Contact',
+                translate: 'NAV.Contacts.TITLE',
+                type     : 'item',
+                icon     : 'add',
+                url      : '/contact/new',
             },
             {
                 id       : 'contacts',
@@ -34,6 +42,22 @@ export const navigation: FuseNavigation[] = [
                     bg       : '#F44336',
                     fg       : '#FFFFFF'
                 }
+            }, 
+            {
+                id       : 'import',
+                title    : 'Import',
+                translate: 'NAV.Contacts.TITLE',
+                type     : 'item',
+                icon     : 'file_download',
+                url      : '/contact/new',
+            }, 
+            {
+                id       : 'export',
+                title    : 'Export',
+                translate: 'NAV.Contacts.TITLE',
+                type     : 'item',
+                icon     : 'file_upload',
+                url      : '/contact',
             }
         ]
     }

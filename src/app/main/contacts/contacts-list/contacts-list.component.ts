@@ -25,8 +25,8 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./contacts-list.component.scss']
 })
 export class ContactsListComponent implements OnInit, OnDestroy {
-    isLoading = false;
-    displayedColumns = ['select', 'full_Name', 'email', 'phone', 'jobTitle&Company', 'edit', 'delete'];
+
+    displayedColumns = ['select', 'imagePath', 'full_Name', 'email', 'phone', 'jobTitle&Company', 'edit', 'delete'];
     dataSource = this.contactsService.getContacts();
     subscription: Subscription;
     contacts: ContactsDto[];
@@ -53,8 +53,8 @@ export class ContactsListComponent implements OnInit, OnDestroy {
       }
 
     onEditContact(contact: ContactsDto){
-        const index = this.contacts.indexOf(contact) + 1;
-    this.router.navigate(['../contact/edit'  , index], {relativeTo: this.route});
+        const id = this.contacts.indexOf(contact) + 1;
+        this.router.navigate(['../contact/edit'  , id], {relativeTo: this.route});
     }
 
     onDeleteContact(contact: ContactsDto){
@@ -63,9 +63,8 @@ export class ContactsListComponent implements OnInit, OnDestroy {
     }
 
     getInfo(contact: ContactsDto){
-        const index = this.contacts.indexOf(contact) + 1;
-        this.contactsService.getContact(index);
-        this.router.navigate(['../contact', index], {relativeTo: this.route});
+        const id = this.contacts.indexOf(contact) + 1;
+        this.router.navigate(['../contact'  , id], {relativeTo: this.route});
 
     }
   

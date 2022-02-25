@@ -12,15 +12,15 @@
 
         <div fxFlex fxLayoutAlign="start center" class="header-image">
             <img mat-card-image
-                src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                src={{contact.imagePath}} 
                 alt="Photo of a Shiba Inu">
         </div>
 
         <div fxFlex="30%" fxLayout="column" fxLayoutAlign="center"
             class="header-name">
 
-            <mat-card-title>Shiba Inu</mat-card-title>
-            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+            <mat-card-title>{{contact.first_Name}} {{contact.last_Name}} </mat-card-title>
+            <mat-card-subtitle>{{contact.job_Title}}</mat-card-subtitle>
         </div>
 
         <div fxFlex="50" fxLayout class="header-edit" fxLayoutAlign="start end">
@@ -39,7 +39,7 @@
                             more_vertma
                         </span></mat-icon>
                 </button>
-                <button mat-raised-button color="primary">Edit</button>
+                <button mat-raised-button color="primary" (click)="onEditContact()">Edit</button>
             </mat-card-actions>
         </div>
     </div>
@@ -61,7 +61,7 @@
                                 </mat-icon>
                             </div>
                             <div  class="item-detail">
-                                <span>awfa.alkarfan@gmail.com</span>
+                                <span>{{contact.email}}</span>
                             </div>
                             <div  class="item-type">
                                 <span>.job</span>
@@ -75,7 +75,7 @@
                                 </mat-icon>
                             </div>
                             <div  class="item-detail">
-                                <span>+90 537 688 01 42</span>
+                                <span>{{contact.phone}}</span>
                             </div>
                             <div  class="item-type">
                                 <span>.Mobile</span>
@@ -89,7 +89,7 @@
                                 </mat-icon>
                             </div>
                             <div  class="item-detail">
-                                <span>ITM</span>
+                                <span>{{contact.company}}</span>
                             </div>
                             <div  class="item-type">
                                 <span>.Company</span>
