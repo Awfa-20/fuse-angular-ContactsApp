@@ -123,11 +123,14 @@ export class ContactsService {
     updateContact(index: number, newContact: ContactsDto) {
         this.contacts[index] = newContact;
         this.contactChanged.next(this.contacts.slice());
+        this._snackBar.openSnackBar('Contact is Updated');
     }
 
     deleteContact(contact: ContactsDto){
         console.log(this.contacts.indexOf(contact));
         this.contacts.splice(this.contacts.indexOf(contact), 1);
         this.contactChanged.next(this.contacts);
+        this._snackBar.openSnackBar('Contact is Deleted');
     }
+
 }

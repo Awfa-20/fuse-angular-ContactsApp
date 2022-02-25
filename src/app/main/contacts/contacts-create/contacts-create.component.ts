@@ -15,7 +15,8 @@ export class ContactsCreateComponent implements OnInit {
     email: FormControl;
     createContactForm!: FormGroup;
     editMode = false;
-
+    imagePath = this.contact.imagePath;
+    avatarPath = '/assets/images/avatars/profile.jpg';
     constructor(private contactsService: ContactsService, private fb: FormBuilder,
                 private route: ActivatedRoute, private router: Router) {}
 

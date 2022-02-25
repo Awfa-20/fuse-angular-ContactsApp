@@ -23,8 +23,8 @@ export const navigation: FuseNavigation[] = [
             }, 
             {
                 id       : 'add_Contact',
-                title    : 'Add-Contact',
-                translate: 'NAV.Contacts.TITLE',
+                title    : 'Add Contact',
+                translate: 'NAV.Add Contact.TITLE',
                 type     : 'item',
                 icon     : 'add',
                 url      : '/contact/new',

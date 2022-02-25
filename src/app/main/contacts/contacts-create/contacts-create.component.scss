@@ -22,6 +22,9 @@ $fullWidth: 83vw;
 }
 .buttons{
     width: $MatFormFieldWidth;
+    img{
+        border-radius: 50%;
+    }
 }
 
 

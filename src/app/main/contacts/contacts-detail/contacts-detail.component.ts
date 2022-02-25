@@ -31,7 +31,7 @@ export class ContactsDetailComponent implements OnInit {
 
     onEditContact(){ 
         
-        const id = this.contactsService.getContactIndex(this.contact); 
+        const id = this.contactsService.getContactIndex(this.contact) + 1; 
         this.router.navigate(['/contact/edit'  , id], {relativeTo: this.route});
     }
 }
