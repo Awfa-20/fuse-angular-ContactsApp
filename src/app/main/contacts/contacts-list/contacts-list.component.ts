@@ -7,17 +7,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ContactsService } from '../contacts.service';
 import { Subscription } from 'rxjs';
 
-// const CONTACTS_DATA: ContactsDto[] = [
-//     {id: 1, first_Name: 'Can', last_Name: 'Van', company: 'ITM', job_Title: 'Junior', email: 'can@gmail.com', phone: '05556668899', notes: ''},
-//     {id: 2, first_Name: 'Can', last_Name: 'Van', company: 'ITM', job_Title: 'Junior', email: 'can@gmail.com', phone: '05556668899', notes: ''},
-//     {id: 3, first_Name: 'Can', last_Name: 'Van', company: 'ITM', job_Title: 'Junior', email: 'can@gmail.com', phone: '05556668899', notes: ''},
-//     {id: 4, first_Name: 'Can', last_Name: 'Van', company: 'ITM', job_Title: 'Junior', email: 'can@gmail.com', phone: '05556668899', notes: ''},
-//     {id: 5, first_Name: 'Can', last_Name: 'Van', company: 'ITM', job_Title: 'Junior', email: 'can@gmail.com', phone: '05556668899', notes: ''},
-//     {id: 6, first_Name: 'Can', last_Name: 'Van', company: 'ITM', job_Title: 'Junior', email: 'can@gmail.com', phone: '05556668899', notes: ''},
-//     {id: 7, first_Name: 'Can', last_Name: 'Van', company: 'ITM', job_Title: 'Junior', email: 'can@gmail.com', phone: '05556668899', notes: ''},
-//     {id: 8, first_Name: 'Can', last_Name: 'Van', company: 'ITM', job_Title: 'Junior', email: 'can@gmail.com', phone: '05556668899', notes: ''}
-//   ];
-
 @Component({
     selector: 'app-contacts-list',
     templateUrl: './contacts-list.component.html',
@@ -34,10 +23,9 @@ export class ContactsListComponent implements OnInit, OnDestroy {
         'edit',
         'delete',
     ];
-    // dataSource = this.contactsService.getContacts();
-    
+
     subscription: Subscription;
-    contacts: ContactsDto[] =  this.contactsService.getContacts();
+    contacts: ContactsDto[] = this.contactsService.getContacts();
     dataSource = new MatTableDataSource(this.contacts);
 
     /** Selects all rows if they are not all selected; otherwise clear selection. */

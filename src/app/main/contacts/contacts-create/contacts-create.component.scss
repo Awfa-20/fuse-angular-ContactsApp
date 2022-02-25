@@ -7,26 +7,23 @@ $fullWidth: 83vw;
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    // justify-content: space-between ;
-    // align-content: space-between;
 }
 
-.controlButton{
+.controlButton {
     width: $fullWidth;
     height: 20vh;
     display: inline-flex;
     flex-direction: row;
-    justify-content: space-between ;
+    justify-content: space-between;
     align-items: center;
     margin: 20px;
 }
-.buttons{
+.buttons {
     width: $MatFormFieldWidth;
-    img{
+    img {
         border-radius: 50%;
     }
 }
-
 
 .form-control {
     width: $formControlWidth;
@@ -38,14 +35,13 @@ $fullWidth: 83vw;
 
 .mat-form-field {
     width: $MatFormFieldWidth;
-    
 }
 ::ng-deep .mat-form-field {
     font-size: 14px; // example
 }
 
-.mat-18{
-    width:3vw;
+.mat-18 {
+    width: 3vw;
     margin-left: 20px;
 }
 
@@ -53,31 +49,9 @@ $fullWidth: 83vw;
     min-width: 150px;
     max-width: 100%;
     width: 100%;
-  }
-  
-  .full-width {
+}
+
+.full-width {
     // width: 100%;
-  }
+}
 
-
-
-
-
-  // .main-content {
-//     background-color: #fff;
-//     height: 100%;
-//     width: 100%;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-// }
-
-// .container-fluid {
-//     background-color: #fff;
-//     height: 100%;
-//     width: 100%;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     // margin-left:20px;
-// }

@@ -2,7 +2,6 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <!-- <mat-card class="example-card"> -->
                 <form [formGroup]='createContactForm' class="example-form"
                     *ngIf="createContactForm"
                     (ngSubmit)="createContactForm.valid && onSubmit()">
@@ -10,18 +9,13 @@
                     <div class="row  controlButton">
                         <div class="buttons">
                             <button mat-button>
-                                <mat-icon class="mat-18"
-                                    routerLink="/contacts">
+                                <mat-icon class="mat-18" routerLink="/contacts">
                                     close</mat-icon>
                             </button>
                         </div>
 
                         <div class="buttons">
-
-                            <img src={{contact.imagePath}}   alt="Contact-image">
-                            <!-- <button mat-raised-button type="button"
-                                color="primary"
-                                (click)="onClick()">save</button> -->
+                            <img src={{contact.imagePath}} alt="Contact-image">
                         </div>
 
                         <div class="buttons">
@@ -108,8 +102,6 @@
                                 <mat-label>Enter your email</mat-label>
                                 <input matInput placeholder="pat@example.com"
                                     formControlName="email" />
-                                <!-- <mat-error *ngIf="email.invalid">
-                                        {{getErrorMessage()}}</mat-error> -->
                             </mat-form-field>
                         </div>
                         <div class="">
@@ -167,8 +159,6 @@
                     </div>
 
                 </form>
-
-                <!-- </mat-card> -->
             </div>
 
         </div>

@@ -94,7 +94,7 @@ export class ContactsService {
             job_Title: 'Junior',
             email: 'can8@gmail.com',
             phone: '+90 888 888 88 99',
-            imagePath: '/assets/images/avatars/profile.jpg',
+            imagePath: '/assets/images/avatars/garry.jpg',
             notes: '',
         },
     ];

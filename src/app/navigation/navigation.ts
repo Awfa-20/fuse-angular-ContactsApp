@@ -36,28 +36,22 @@ export const navigation: FuseNavigation[] = [
                 type     : 'item',
                 icon     : 'person',
                 url      : '/contacts',
-                badge    : {
-                    title    : '25',
-                    translate: 'NAV.Contacts.BADGE',
-                    bg       : '#F44336',
-                    fg       : '#FFFFFF'
-                }
             }, 
             {
                 id       : 'import',
                 title    : 'Import',
-                translate: 'NAV.Contacts.TITLE',
+                translate: 'NAV.Import.TITLE',
                 type     : 'item',
                 icon     : 'file_download',
-                url      : '/contact/new',
+                url      : '/sample',
             }, 
             {
                 id       : 'export',
                 title    : 'Export',
-                translate: 'NAV.Contacts.TITLE',
+                translate: 'NAV.Export.TITLE',
                 type     : 'item',
                 icon     : 'file_upload',
-                url      : '/contact',
+                url      : '/sample',
             }
         ]
     }
